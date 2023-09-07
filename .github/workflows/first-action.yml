@@ -1,0 +1,12 @@
+name: First Workflow #su nombre
+on: workflow_dispatch #el o los eventos que deben desencadenar la ejecución de éste flujo de trabajo. Éste evento particular se asegura de que podamos activar manualmente éste flujo de trabajo. Es un ev. que espera que el usuario inicie manualm este flujo
+jobs: 
+  first_job:
+    runs-on: ubuntu-latest #necesitamos definir los runners donde se correrá el job. siempre se escribe así "runs-on". son los Github-hosted runners, podemos elegirlos.
+    steps: 
+      - name: Print greeting
+        run: echo "Hello world!"
+      - name: Print goodbye
+        run: echo "Done - bye!
+
+       
